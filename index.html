@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindvalley Two-Row Carousel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #ffffff;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        .carousel-section {
+            width: 100%;
+            padding: 60px 0;
+            background: #ffffff;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 400;
+        }
+
+        .carousel-rows {
+            width: 100%;
+        }
+
+        .carousel-row {
+            width: 100%;
+            margin-bottom: 24px;
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 20px;
+            will-change: transform;
+        }
+
+        /* First row - slower speed */
+        .carousel-track.row-1 {
+            animation: scrollRight 40s linear infinite;
+        }
+
+        /* Second row - faster speed, opposite direction */
+        .carousel-track.row-2 {
+            animation: scrollLeft 30s linear infinite;
+        }
+
+        .course-card {
+            width: 480px;
+            height: 220px;
+            border-radius: 12px;
+            background-size: cover;
+            background-position: center;
+            flex-shrink: 0;
+            margin-right: 24px;
+            position: relative;
+        }
+
+        .card-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 24px;
+            z-index: 2;
+            color: white;
+        }
+
+        .course-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .instructor-name {
+            font-size: 0.9rem;
+            font-weight: 500;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Animations */
+        @keyframes scrollRight {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes scrollLeft {
+            0% {
+                transform: translateX(-50%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /* Pause animation on hover */
+        .carousel-track:hover {
+            animation-play-state: paused;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .course-card {
+                width: 400px;
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .course-card {
+                width: 280px;
+                height: 160px;
+            }
+            
+            .card-content {
+                padding: 15px;
+            }
+            
+            .course-title {
+                font-size: 1.3rem;
+            }
+
+            .carousel-track {
+                gap: 16px;
+            }
+
+            .carousel-section {
+                padding: 40px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .course-card {
+                width: 240px;
+                height: 140px;
+            }
+
+            .carousel-section {
+                padding: 30px 0;
+            }
+
+            .carousel-track {
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="carousel-section">
+        <div class="section-header">
+            <h1 class="section-title">I Nostri Programmi di Affiancamento per Risultati Concreti</h1>
+            <p class="section-subtitle">Trasforma il tuo business con percorsi di mentorship personalizzati. Strategie pratiche, supporto diretto e risultati misurabili per far crescere la tua attività.</p>
+        </div>
+
+        <div class="carousel-rows">
+            <!-- First Row - Scrolls Right to Left -->
+            <div class="carousel-row">
+                <div class="carousel-track row-1">
+                    <div class="course-card" style="background-image: url('business.png');"></div>
+
+                    <div class="course-card" style="background-image: url('academy.png');"></div>
+
+                    <div class="course-card" style="background-image: url('realestate.png');"></div>
+
+                    <div class="course-card" style="background-image: url('DC.png');"></div>
+
+                    <div class="course-card" style="background-image: url('minetti.png');"></div>
+
+                    <div class="course-card" style="background-image: url('MM.png');"></div>
+
+                    <div class="course-card" style="background-image: url('sales.png');"></div>
+
+                    <!-- Duplicate for seamless loop -->
+                    <div class="course-card" style="background-image: url('business.png');"></div>
+
+                    <div class="course-card" style="background-image: url('academy.png');"></div>
+
+                    <div class="course-card" style="background-image: url('realestate.png');"></div>
+
+                    <div class="course-card" style="background-image: url('DC.png');"></div>
+
+                    <div class="course-card" style="background-image: url('minetti.png');"></div>
+
+                    <div class="course-card" style="background-image: url('MM.png');"></div>
+
+                    <div class="course-card" style="background-image: url('sales.png');"></div>
+                </div>
+            </div>
+
+            <!-- Second Row - Scrolls Left to Right (opposite direction) -->
+            <div class="carousel-row">
+                <div class="carousel-track row-2">
+                    <div class="course-card" style="background-image: url('sales.png');"></div>
+
+                    <div class="course-card" style="background-image: url('MM.png');"></div>
+
+                    <div class="course-card" style="background-image: url('minetti.png');"></div>
+
+                    <div class="course-card" style="background-image: url('DC.png');"></div>
+
+                    <div class="course-card" style="background-image: url('realestate.png');"></div>
+
+                    <div class="course-card" style="background-image: url('academy.png');"></div>
+
+                    <div class="course-card" style="background-image: url('business.png');"></div>
+
+                    <!-- Duplicate for seamless loop -->
+                    <div class="course-card" style="background-image: url('sales.png');"></div>
+
+                    <div class="course-card" style="background-image: url('MM.png');"></div>
+
+                    <div class="course-card" style="background-image: url('minetti.png');"></div>
+
+                    <div class="course-card" style="background-image: url('DC.png');"></div>
+
+                    <div class="course-card" style="background-image: url('realestate.png');"></div>
+
+                    <div class="course-card" style="background-image: url('academy.png');"></div>
+
+                    <div class="course-card" style="background-image: url('business.png');"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Handle visibility change (pause when tab is not active)
+        document.addEventListener('visibilitychange', () => {
+            const tracks = document.querySelectorAll('.carousel-track');
+            tracks.forEach(track => {
+                if (document.hidden) {
+                    track.style.animationPlayState = 'paused';
+                } else {
+                    track.style.animationPlayState = 'running';
+                }
+            });
+        });
+
+        // Optional: Add touch/drag functionality for mobile
+        document.querySelectorAll('.carousel-track').forEach(track => {
+            let startX = 0;
+            let isDown = false;
+
+            track.addEventListener('touchstart', (e) => {
+                isDown = true;
+                startX = e.touches[0].pageX;
+                track.style.animationPlayState = 'paused';
+            });
+
+            track.addEventListener('touchend', () => {
+                isDown = false;
+                setTimeout(() => {
+                    track.style.animationPlayState = 'running';
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>
