@@ -23,6 +23,7 @@
             width: 100%;
             padding: 60px 0;
             background: #ffffff;
+            touch-action: pan-y;
         }
 
         .section-header {
@@ -64,6 +65,8 @@
             display: flex;
             gap: 20px;
             will-change: transform;
+            touch-action: pan-y;
+            pointer-events: none;
         }
 
         /* First row - slower speed */
@@ -91,6 +94,8 @@
             height: auto;
             display: block;
             border-radius: 12px;
+            pointer-events: auto;
+            touch-action: pan-y;
         }
 
         .card-content {
@@ -275,25 +280,6 @@
                 } else {
                     track.style.animationPlayState = 'running';
                 }
-            });
-        });
-
-        // Optional: Add touch/drag functionality for mobile
-        document.querySelectorAll('.carousel-track').forEach(track => {
-            let startX = 0;
-            let isDown = false;
-
-            track.addEventListener('touchstart', (e) => {
-                isDown = true;
-                startX = e.touches[0].pageX;
-                track.style.animationPlayState = 'paused';
-            });
-
-            track.addEventListener('touchend', () => {
-                isDown = false;
-                setTimeout(() => {
-                    track.style.animationPlayState = 'running';
-                }, 1000);
             });
         });
     </script>
