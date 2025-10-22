@@ -78,15 +78,19 @@
 
         .course-card {
             width: 480px;
-            height: 220px;
+            height: auto;
             border-radius: 12px;
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-color: #f5f5f5;
             flex-shrink: 0;
             margin-right: 24px;
             position: relative;
+            overflow: hidden;
+        }
+        
+        .course-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
         }
 
         .card-content {
@@ -143,7 +147,6 @@
         @media (max-width: 1200px) {
             .course-card {
                 width: 400px;
-                height: 200px;
             }
         }
 
@@ -163,7 +166,6 @@
             
             .course-card {
                 width: 280px;
-                height: 160px;
             }
             
             .card-content {
@@ -199,7 +201,6 @@
             
             .course-card {
                 width: 240px;
-                height: 140px;
             }
 
             .carousel-section {
@@ -223,68 +224,42 @@
             <!-- First Row - Scrolls Right to Left -->
             <div class="carousel-row">
                 <div class="carousel-track row-1">
-                    <div class="course-card" style="background-image: url('business.png');"></div>
-
-                    <div class="course-card" style="background-image: url('academy.png');"></div>
-
-                    <div class="course-card" style="background-image: url('realestate.png');"></div>
-
-                    <div class="course-card" style="background-image: url('DC.png');"></div>
-
-                    <div class="course-card" style="background-image: url('minetti.png');"></div>
-
-                    <div class="course-card" style="background-image: url('MM.png');"></div>
-
-                    <div class="course-card" style="background-image: url('sales.png');"></div>
-
+                    <div class="course-card"><img src="business.png" alt="Business"></div>
+                    <div class="course-card"><img src="academy.png" alt="Academy"></div>
+                    <div class="course-card"><img src="realestate.png" alt="Real Estate"></div>
+                    <div class="course-card"><img src="DC.png" alt="DC"></div>
+                    <div class="course-card"><img src="minetti.png" alt="Minetti"></div>
+                    <div class="course-card"><img src="MM.png" alt="MM"></div>
+                    <div class="course-card"><img src="sales.png" alt="Sales"></div>
                     <!-- Duplicate for seamless loop -->
-                    <div class="course-card" style="background-image: url('business.png');"></div>
-
-                    <div class="course-card" style="background-image: url('academy.png');"></div>
-
-                    <div class="course-card" style="background-image: url('realestate.png');"></div>
-
-                    <div class="course-card" style="background-image: url('DC.png');"></div>
-
-                    <div class="course-card" style="background-image: url('minetti.png');"></div>
-
-                    <div class="course-card" style="background-image: url('MM.png');"></div>
-
-                    <div class="course-card" style="background-image: url('sales.png');"></div>
+                    <div class="course-card"><img src="business.png" alt="Business"></div>
+                    <div class="course-card"><img src="academy.png" alt="Academy"></div>
+                    <div class="course-card"><img src="realestate.png" alt="Real Estate"></div>
+                    <div class="course-card"><img src="DC.png" alt="DC"></div>
+                    <div class="course-card"><img src="minetti.png" alt="Minetti"></div>
+                    <div class="course-card"><img src="MM.png" alt="MM"></div>
+                    <div class="course-card"><img src="sales.png" alt="Sales"></div>
                 </div>
             </div>
 
             <!-- Second Row - Scrolls Left to Right (opposite direction) -->
             <div class="carousel-row">
                 <div class="carousel-track row-2">
-                    <div class="course-card" style="background-image: url('sales.png');"></div>
-
-                    <div class="course-card" style="background-image: url('MM.png');"></div>
-
-                    <div class="course-card" style="background-image: url('minetti.png');"></div>
-
-                    <div class="course-card" style="background-image: url('DC.png');"></div>
-
-                    <div class="course-card" style="background-image: url('realestate.png');"></div>
-
-                    <div class="course-card" style="background-image: url('academy.png');"></div>
-
-                    <div class="course-card" style="background-image: url('business.png');"></div>
-
+                    <div class="course-card"><img src="sales.png" alt="Sales"></div>
+                    <div class="course-card"><img src="MM.png" alt="MM"></div>
+                    <div class="course-card"><img src="minetti.png" alt="Minetti"></div>
+                    <div class="course-card"><img src="DC.png" alt="DC"></div>
+                    <div class="course-card"><img src="realestate.png" alt="Real Estate"></div>
+                    <div class="course-card"><img src="academy.png" alt="Academy"></div>
+                    <div class="course-card"><img src="business.png" alt="Business"></div>
                     <!-- Duplicate for seamless loop -->
-                    <div class="course-card" style="background-image: url('sales.png');"></div>
-
-                    <div class="course-card" style="background-image: url('MM.png');"></div>
-
-                    <div class="course-card" style="background-image: url('minetti.png');"></div>
-
-                    <div class="course-card" style="background-image: url('DC.png');"></div>
-
-                    <div class="course-card" style="background-image: url('realestate.png');"></div>
-
-                    <div class="course-card" style="background-image: url('academy.png');"></div>
-
-                    <div class="course-card" style="background-image: url('business.png');"></div>
+                    <div class="course-card"><img src="sales.png" alt="Sales"></div>
+                    <div class="course-card"><img src="MM.png" alt="MM"></div>
+                    <div class="course-card"><img src="minetti.png" alt="Minetti"></div>
+                    <div class="course-card"><img src="DC.png" alt="DC"></div>
+                    <div class="course-card"><img src="realestate.png" alt="Real Estate"></div>
+                    <div class="course-card"><img src="academy.png" alt="Academy"></div>
+                    <div class="course-card"><img src="business.png" alt="Business"></div>
                 </div>
             </div>
         </div>
