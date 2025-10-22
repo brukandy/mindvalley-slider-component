@@ -53,11 +53,13 @@
 
         .carousel-rows {
             width: 100%;
+            overflow: hidden;
         }
 
         .carousel-row {
             width: 100%;
             margin-bottom: 24px;
+            overflow: hidden;
         }
 
         .carousel-track {
@@ -147,7 +149,16 @@
 
         @media (max-width: 768px) {
             .section-title {
-                font-size: 2.5rem;
+                font-size: 1.75rem;
+            }
+            
+            .section-subtitle {
+                font-size: 1rem;
+            }
+            
+            .section-header {
+                margin-bottom: 40px;
+                padding: 0 16px;
             }
             
             .course-card {
@@ -174,7 +185,16 @@
 
         @media (max-width: 480px) {
             .section-title {
-                font-size: 2rem;
+                font-size: 1.5rem;
+            }
+            
+            .section-subtitle {
+                font-size: 0.9rem;
+            }
+            
+            .section-header {
+                margin-bottom: 30px;
+                padding: 0 12px;
             }
             
             .course-card {
