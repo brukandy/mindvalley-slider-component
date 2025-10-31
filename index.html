@@ -48,8 +48,77 @@
             color: #666;
             line-height: 1.6;
             max-width: 700px;
-            margin: 0 auto;
+            margin: 0 auto 24px auto;
             font-weight: 400;
+        }
+        
+        .program-list {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+        }
+        
+        .program-list p {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin: 0;
+            flex: 1 1 calc(50% - 8px);
+            min-width: 280px;
+            padding: 20px 24px;
+            border-radius: 12px;
+            background: white;
+            border-left: 4px solid;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            color: #333;
+        }
+        
+        .program-list p:hover {
+            transform: translateX(4px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .program-list strong {
+            display: block;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+        }
+        
+        .program-list p:nth-child(1) {
+            border-left-color: #1e3a5f;
+        }
+        
+        .program-list p:nth-child(1) strong {
+            color: #1e3a5f;
+        }
+        
+        .program-list p:nth-child(2) {
+            border-left-color: #d4a574;
+        }
+        
+        .program-list p:nth-child(2) strong {
+            color: #d4a574;
+        }
+        
+        .program-list p:nth-child(3) {
+            border-left-color: #8b5cf6;
+        }
+        
+        .program-list p:nth-child(3) strong {
+            color: #8b5cf6;
+        }
+        
+        .program-list p:nth-child(4) {
+            border-left-color: #60a5fa;
+        }
+        
+        .program-list p:nth-child(4) strong {
+            color: #60a5fa;
         }
 
         .carousel-rows {
@@ -188,6 +257,16 @@
             .carousel-section {
                 padding: 40px 0;
             }
+            
+            .program-list {
+                gap: 12px;
+            }
+            
+            .program-list p {
+                font-size: 0.9rem;
+                flex: 1 1 100%;
+                padding: 16px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -215,14 +294,35 @@
             .carousel-track {
                 gap: 12px;
             }
+            
+            .program-list {
+                gap: 10px;
+            }
+            
+            .program-list p {
+                font-size: 0.85rem;
+                flex: 1 1 100%;
+                padding: 14px;
+            }
+            
+            .program-list strong {
+                font-size: 0.9rem;
+                padding: 5px 12px;
+            }
         }
     </style>
 </head>
 <body>
     <section class="carousel-section">
         <div class="section-header">
-            <h1 class="section-title">I Nostri Programmi di Affiancamento per Risultati Concreti</h1>
-            <p class="section-subtitle">Trasforma il tuo business con percorsi di mentorship personalizzati. Strategie pratiche, supporto diretto e risultati misurabili per far crescere la tua attività.</p>
+            <h1 class="section-title">Trasforma il modo in cui pensi, lavori e vivi.</h1>
+            <p class="section-subtitle">Con i nostri programmi di affiancamento impari a portare metodo, chiarezza e risultati reali in ogni ambito della tua vita:</p>
+            <div class="program-list">
+                <p><strong>Mindset e Consapevolezza</strong> • Allena il modo in cui pensi e affronti le sfide.</p>
+                <p><strong>Business e Performance</strong> • Porta metodo, chiarezza e risultati nel tuo lavoro.</p>
+                <p><strong>Comunicazione e Coaching</strong> • Migliora la tua capacità di guidare e comprendere.</p>
+                <p><strong>Equilibrio e Crescita Personale</strong> • Riscopri focus, energia e direzione.</p>
+            </div>
         </div>
 
         <div class="carousel-rows">
